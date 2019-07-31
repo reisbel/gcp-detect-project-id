@@ -22,6 +22,8 @@ Run the project
 dotnet run
 ```
 
+Sample ouput
+
 ```bash
 Project-id: test-project-id
 ```
