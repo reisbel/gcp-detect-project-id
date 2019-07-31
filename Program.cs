@@ -26,19 +26,14 @@ namespace gcp_detect_project_id
                     //Add required Google Header to request this info
                     client.DefaultRequestHeaders.Add("Metadata-Flavor","Google");
                     using (HttpResponseMessage res = await client.GetAsync(baseUrl))
-                    {
                         using (HttpContent content = res.Content)
-                        {
                             return await content.ReadAsStringAsync();
-                        }
-                    }
                 }
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            
            
             return string.Empty;
    }   }
